@@ -12,7 +12,7 @@ This is a basic markdown file using all the important features of markdown with 
     * [Very, Very Basic Example](#very-very-basic)
     * [README for a Project](#readme-for-a-project)
     * [Notes from a Lecture](#notes-from-a-lecture)
-* [Contents](#contents)
+* [Main Sections](#content)
     * [Headers](#headers)
     * [Text Styling](#text-styling)
     * [Listings](#listings)
