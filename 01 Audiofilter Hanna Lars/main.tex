@@ -1,3 +1,4 @@
+
 \documentclass{article}
 \usepackage[a4paper, margin={3cm, 1.5cm}]{geometry} % Document format
 \usepackage[utf8]{inputenc} % Unicode symbols
@@ -7,6 +8,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{afterpage}
+\usepackage{hyperref}
 
 % Bibliography
 \usepackage{csquotes}
@@ -73,7 +75,7 @@ Von einem handelsübliches Oszilloskop wurde einerseits die Spannung des Inputsi
     \minipage{0.49\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/setup_close.png}
-        \caption{Steckbrett mit Verkabelung. Oben links im Bild befindet sich die \emph{Sound Machine}, von welcher das Inputsignal kommt. Dies entspricht der gelben Kurve in den Messungen (\ref{img:c0_r47}, \ref{img:c33e1_r47}, ..)}
+        \caption{Steckbrett mit Verkabelung. Oben links im Bild befindet sich die \emph{Sound Machine}, von welcher das Inputsignal kommt. Dies entspricht der gelben Kurve in den Messungen (\ref{img:c33e0_r47}, \ref{fig:showcase_c33e1_r47} ..)}
         \label{img:setup_close}
     \endminipage\hfill
     \minipage{0.49\textwidth}
@@ -107,14 +109,14 @@ Folgende äussere Bedingungen waren gegeben beziehungsweise wurde festgelegt:
          \hline\hline
                     & SI-Untereinheiten & Wissenschaftliche Schreibweise \\
          \hline
-         $33, 330$  & $33p F$   & $33 \cdot 10^{-9} F$ \\
-         $68, 680$  & $68p F$   & $68 \cdot 10^{-9} F$ \\
-         $331$      & $330p F$  & $33 \cdot 10^{-8} F$ \\
-         $681$      & $680p F$  & $68 \cdot 10^{-8} F$ \\
-         $332$      & $3300p F$ & $33 \cdot 10^{-7} F$ \\
-         $682$      & $6800p F$ & $68 \cdot 10^{-7} F$ \\
-         $333$      & $33n F$   & $33 \cdot 10^{-6} F$ \\
-         $683$      & $68n F$   & $68 \cdot 10^{-6} F$ \\
+         $33, 330$  & $33p F$   & $33 \cdot 10^{-12} F$ \\
+         $68, 680$  & $68p F$   & $68 \cdot 10^{-12} F$ \\
+         $331$      & $330p F$  & $33 \cdot 10^{-11} F$ \\
+         $681$      & $680p F$  & $68 \cdot 10^{-11} F$ \\
+         $332$      & $3300p F$ & $33 \cdot 10^{-10} F$ \\
+         $682$      & $6800p F$ & $68 \cdot 10^{-10} F$ \\
+         $333$      & $33n F$   & $33 \cdot 10^{-9} F$ \\
+         $683$      & $68n F$   & $68 \cdot 10^{-9} F$ \\
     \end{tabular}
     \caption{Liste der verwendeten Kondensatoren}
     \label{tab:capacitors}
@@ -271,14 +273,22 @@ Dennoch ist ein klarer Trend ersichtlich, dass je höher die Kapazität des Kond
 Dieselbe Frequenz wurde grösstenteils gefiltert mit einem Kondensator von $33pF$
 Auch bei der numerischen Auswertung der Daten (Tabelle \ref{tab:integrals} ist dieser Trend sichtbar, wenn auch weniger offensichtlich. Dort scheinen die Werte für $190\Omega$ sehr nahe beieinander. Dies könnte durchaus von einem Rechenfehler herbeigeführt worden sein, da die Graphen sich deutlich unterscheiden.
 
+Man kann auch sehen, dass die Graphen mit der Änderung des Kondensators bei niedrigem Widerstand viel mehr abweichen als bei hohem Widerstand (252,2 bei 47,3 und nur 86 bei 190 - Daten aus Tabelle 2).
 
- "-	Man kann sehen, dass die Graphen mit der Änderung des Kondensators bei niedrigem Widerstand viel mehr abweichen als bei hohem Widerstand (252,2 bei 47,3 und nur 86 bei 190)".
+Die genaue Grenze konnte jedoch nicht herausgelesen werden, wie auch die Art des Zusammenhangs zwischen Widerstand, Kapazität und Frequenz. Dazu wären mehr Messungen zu unterschiedlichen Widerständen nötig gewesen, aber schussendlich ist es an der numerischen Auswertung gescheitert. Da keinen Datenpunkte vom Oszilloskop, sondern nur Bilder extrahiert werden konnten, wurde die Auswertung stark erschwert und konnte nur für 4 Werte ausgeführt werden. Auch diese haben nur zweifelhafte Aussagekraft.
+Qualitativ wurden jedoch alle Erwartungen erfüllt.
+
 \newpage
-% TODO: Github link?
+
 \section{Bibliografie}
 \printbibliography{} % Automatisch generierte Referenzen
 
 \section{Anhang}
+
+\emph{
+    Alle Bilder, Tabellen sowie die Latex-Sourcen für diese Arbeit können unter
+    \href{https://github.com/lrshsl/data/}{https://github.com/lrshsl/data/} im Ordner \emph{01 Audiofilter Hanna Lars} gefunden werden.
+}
 
 \newpage
 \subsection{Werte für $R = 47k\Omega$}
